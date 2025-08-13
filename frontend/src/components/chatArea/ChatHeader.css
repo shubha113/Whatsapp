@@ -1,0 +1,91 @@
+.chat-header {
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e9edef;
+  height: 59px;
+}
+
+.chat-header-info {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+  gap: 12px; /* Added gap between avatar and name */
+}
+
+.chat-header-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.chat-header-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.chat-header-name {
+  font-size: 16px;
+  color: #111b21;
+  font-weight: 500; /* Slightly bolder for prominence */
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.chat-header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px; /* Reduced gap between icons for a tighter look */
+}
+
+/* New wrapper for icons to control size and hover effect */
+.chat-header-icon-wrapper {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #54656f;
+  transition: background-color 0.2s, color 0.2s;
+  flex-shrink: 0;
+}
+
+.chat-header-icon-wrapper:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: #00a884;
+}
+
+.chat-header-icon-wrapper svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .chat-header {
+    padding: 10px 12px;
+  }
+  
+  .chat-header-info {
+    gap: 8px; /* Adjusted gap for mobile */
+  }
+
+  .chat-header-right {
+    gap: 12px; /* Adjusted gap for mobile */
+  }
+  
+  .chat-header-name {
+    font-size: 15px;
+  }
+}
